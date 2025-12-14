@@ -1,17 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <title>مترجم فرانكو عربي: أداة ترجمة فورية مجانية من فرانكو إلى عربي والعكس</title>
-  <!-- Improved Title Tag: More specific, keyword-rich, and clearly states the tool's function. -->
-
   <meta name="description" content="استخدم أفضل مترجم فرانكو عربي مجاني واحترافي لتحويل النصوص والجمل فوراً. ترجمة سريعة ودقيقة من فرانكو إلى العربية أو من العربية إلى الفرانكو بسهولة.">
-  <!-- Enhanced Description: Focuses on functionality, keywords, and user benefits for better CTR in SERPs. -->
-
   <meta name="keywords" content="مترجم فرانكو, ترجمة فرانكو, فرانكو عربي, عربي فرانكو, تحويل فرانكو لعربي, مترجم فرانكو أونلاين, أداة ترجمة فرانكو, franco to arabic, arabic to franco, franco translator online, free franco translator">
-  <!-- Updated Keywords: Broader, more specific, and includes long-tail variations. -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,43 +37,34 @@
         display: none;
     }
   </style>
-<script type="importmap">
-{
-  "imports": {
-    "rxjs": "https://aistudiocdn.com/rxjs@^7.8.2?conditions=es2015",
-    "rxjs/operators": "https://aistudiocdn.com/rxjs@^7.8.2/operators?conditions=es2015",
-    "rxjs/ajax": "https://aistudiocdn.com/rxjs@^7.8.2/ajax?conditions=es2015",
-    "rxjs/webSocket": "https://aistudiocdn.com/rxjs@^7.8.2/webSocket?conditions=es2015",
-    "rxjs/testing": "https://aistudiocdn.com/rxjs@^7.8.2/testing?conditions=es2015",
-    "rxjs/fetch": "https://aistudiocdn.com/rxjs@^7.8.2/fetch?conditions=es2015",
-    "@angular/compiler": "https://next.esm.sh/@angular/compiler@^21.0.0?external=rxjs",
-    "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^21.0.0?external=rxjs",
-    "@angular/core": "https://next.esm.sh/@angular/core@^21.0.0?external=rxjs",
-    "@angular/common": "https://next.esm.sh/@angular/common@^21.0.0?external=rxjs"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-<!-- Schema.org Markup for better search engine understanding (Tool & WebSite) -->
+<!-- Schema.org Markup for better search engine understanding (WebApplication) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["WebSite", "Tool"],
+  "@type": "WebApplication",
   "name": "مترجم فرانكو عربي",
-  "url": "https://francotranslate.github.io/", <!-- REMEMBER TO REPLACE WITH YOUR ACTUAL URL -->
+  "url": "https://francotranslate.github.io/",
   "description": "أداة ترجمة فورية ومجانية لتحويل النصوص من الفرانكو إلى العربية ومن العربية إلى الفرانكو بسهولة وسرعة.",
+  "softwareRequirements": "Requires JavaScript enabled browser.",
+  "applicationCategory": "Utilities",
+  "operatingSystem": "All",
+  "featureList": [
+    "Franco to Arabic Translation",
+    "Arabic to Franco Translation",
+    "Free Online Translator",
+    "Instant Translation"
+  ],
+  "inLanguage": "ar",
   "potentialAction": {
-    "@type": "TranslateAction",
+    "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://francotranslate.github.io/?text={search_term_string}&from={from_language}&to={to_language}" <!-- REMEMBER TO REPLACE WITH YOUR ACTUAL URL AND ADD DYNAMIC PARAMETERS -->
+      "urlTemplate": "https://francotranslate.github.io/?text={search_term_string}&from={from_language}&to={to_language}"
     },
     "query-input": "required name=search_term_string"
   }
 }
 </script>
-<!-- End Schema.org Markup -->
-
 </head>
 <body class="bg-gray-100 dark:bg-slate-900 font-sans text-slate-800 dark:text-slate-200">
   
@@ -89,24 +73,21 @@
     <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-2">
       <span class="text-indigo-600 dark:text-indigo-400">مترجم فرانكو</span> الإحترافي <span class="text-indigo-600 dark:text-indigo-400">للعربية</span>
     </h1>
-    <!-- Modified H1 for stronger keyword presence: "مترجم فرانكو الإحترافي للعربية" -->
     <p class="text-lg text-slate-600 dark:text-slate-400">
       ترجم بسهولة بين <strong>الفرانكو والعربية</strong> بنقرة زر واحدة
     </p>
-    <!-- Added <strong> for keywords in intro paragraph -->
   </div>
 
   <div class="w-full max-w-4xl bg-white dark:bg-slate-800 shadow-2xl rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700">
     <!-- Text Areas -->
     <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-start">
       <!-- Franco Area -->
-      <div class="p-4 relative">
+      <div class="p-4 relative franco-area"> <!-- Added franco-area class for initial styling -->
         <div class="flex justify-between items-center mb-2">
           <label id="franco-label" for="franco-input" class="font-semibold text-slate-700 dark:text-slate-300">
             فرانكو (من)
           </label>
           <button id="franco-copy-btn" title="نسخ نص الفرانكو" class="relative p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
-              <!-- Added title attribute for accessibility and SEO hint -->
               <svg id="franco-copy-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-500 dark:text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
               <svg id="franco-check-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 hidden" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
           </button>
@@ -121,7 +102,6 @@
       <!-- Swap Button -->
       <div class="flex items-center justify-center h-full py-2 md:py-0 md:pt-10 border-y md:border-y-0 md:border-x border-slate-200 dark:border-slate-700">
         <button id="swap-btn" title="تبديل اللغات للترجمة" class="p-3 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-          <!-- Added title attribute -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
           </svg>
@@ -129,13 +109,12 @@
       </div>
 
       <!-- Arabic Area -->
-      <div class="p-4 relative">
+      <div class="p-4 relative arabic-area"> <!-- Added arabic-area class for initial styling -->
         <div class="flex justify-between items-center mb-2">
           <label id="arabic-label" for="arabic-input" class="font-semibold text-slate-700 dark:text-slate-300">
              عربي (إلى)
           </label>
            <button id="arabic-copy-btn" title="نسخ النص العربي" class="relative p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
-              <!-- Added title attribute -->
               <svg id="arabic-copy-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-500 dark:text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
               <svg id="arabic-check-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 hidden" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
           </button>
@@ -152,12 +131,10 @@
     <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-700">
        <div class="flex items-center justify-between">
           <button id="clear-btn" title="مسح جميع حقول الترجمة" class="px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 bg-slate-200 dark:bg-slate-700 rounded-md hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
-            <!-- Added title attribute -->
             مسح الكل
           </button>
           
           <button id="translate-btn" title="بدء الترجمة" class="flex items-center justify-center px-6 py-2.5 text-base font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 disabled:bg-indigo-400 dark:disabled:bg-indigo-800 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">
-            <!-- Added title attribute -->
             <span>ترجم</span>
           </button>
         </div>
@@ -167,19 +144,14 @@
   <article class="w-full max-w-4xl mt-16 text-right leading-relaxed">
     <div class="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700">
       <h2 class="text-3xl font-bold mb-6 text-slate-900 dark:text-white">دليلك الشامل: كل ما تريد معرفته عن لغة الفرانكو ومترجمها</h2>
-      <!-- Improved H2: More engaging and keyword-rich, suggesting a comprehensive guide. -->
       
       <p class="mb-4 text-slate-600 dark:text-slate-300">تعتبر <strong>لغة الفرانكو</strong> من اللغات التي ظهرت حديثًا في الوطن العربي، وهي عبارة عن كتابة اللغة العربية بحروف إنجليزية وأرقام. نقدم لكم من خلال هذا الموقع تطبيقًا يقوم بتحويل أي نص أو كلام من <strong>فرانكو إلى عربي</strong> أو من <strong>عربي إلى فرانكو</strong>. ويقوم هذا <strong>المترجم</strong> بترجمة الفرانكو إلى عربي ويقوم بترجمة العربي إلى فرانكو أيضًا باستخدام طريقة سهلة وبسيطة. فقط قم بكتابة الكلام الذي تريد ترجمته وسوف يقوم البرنامج تلقائيًا بترجمته وتحويله كما تريد، حيث تستطيع تحديد ما إذا كنت تريد التحويل من <strong>العربية إلى الفرانكو</strong> أو ترجمة من <strong>الفرانكو إلى العربي</strong>.</p>
-      <!-- Added more <strong> tags for key phrases -->
       <p class="mb-6 text-slate-600 dark:text-slate-300">منذ عدة سنوات، ظهر نوع جديد من الكتابة أُطلق عليه <strong>"الفرانكو آراب"</strong> أو ببساطة الفرانكو، وقد لاقت هذه الكتابة شعبية كبيرة خاصة بين الشباب لسهولة استخدامها عبر مواقع التواصل الاجتماعي المختلفة، وانتشرت بسرعة كبيرة، إلا أن البعض قد اعترض عليها لأنها تشوه اللغة العربية.</p>
-      <!-- Added "الفرانكو آراب" for broader keyword matching -->
 
       <h3 class="text-2xl font-bold mt-8 mb-4 text-slate-800 dark:text-slate-100 border-r-4 border-indigo-500 pr-4">ما هي الفرانكو (Franco) وكيف نشأت؟</h3>
-      <!-- Improved H3 for clarity and keyword inclusion -->
       <p class="mb-4 text-slate-600 dark:text-slate-300">الفرانكو، كما ذكرنا، هي لغة تتكون من حروف وأرقام غير رسمية ظهرت في السنوات الأخيرة بعد انتشار الإنترنت ومواقع التواصل الاجتماعي، ويعتمد الكثير من الأشخاص على استخدام هذه اللغة للدردشة عبر الإنترنت. يتم كتابة هذه اللغة بحروف إنجليزية وأرقام لاتينية ولكن يتم نطقها باللغة العربية.</p>
 
       <h3 class="text-2xl font-bold mt-8 mb-4 text-slate-800 dark:text-slate-100 border-r-4 border-indigo-500 pr-4">مفتاح الفرانكو: كيفية فهم وتحويل الأحرف والأرقام</h3>
-      <!-- Improved H3 for clarity and keyword inclusion -->
       <p class="mb-4 text-slate-600 dark:text-slate-300">يتم قراءة لغة الفرانكو بأصوات عربية حسب الحروف الإنجليزية المكتوبة، ويتم استخدام الأرقام كالتالي:</p>
       <ul class="list-disc list-inside bg-slate-50 dark:bg-slate-900/50 p-4 rounded-lg mb-6 space-y-2 text-slate-600 dark:text-slate-300">
         <li><strong class="font-mono text-indigo-600 dark:text-indigo-400 text-lg">2</strong> = همزة (مثل: س2ال = سؤال)</li>
@@ -193,18 +165,14 @@
         <li><strong class="font-mono text-indigo-600 dark:text-indigo-400 text-lg">9</strong> = ص (مثل: 9a7 = صح)</li>
         <li><strong class="font-mono text-indigo-600 dark:text-indigo-400 text-lg">9'</strong> = ض (بديل لـ 9 في بعض الكلمات)</li>
       </ul>
-      <!-- Added examples for clarity -->
       
       <h3 class="text-2xl font-bold mt-8 mb-4 text-slate-800 dark:text-slate-100 border-r-4 border-indigo-500 pr-4">لماذا انتشرت الفرانكو؟ الأسباب والعوامل</h3>
-      <!-- Improved H3 for engagement and keyword focus -->
       <p class="mb-4 text-slate-600 dark:text-slate-300">بعد انتشار الرسائل النصية عبر الهواتف المحمولة والأجهزة الذكية وزاد استخدام شبكات التواصل الاجتماعي والبريد الإلكتروني وغيرها، لم تكن الأبجدية العربية متاحة في العديد من الأجهزة في البداية، ولذلك لجأ بعض الشباب إلى استخدام الأبجدية اللاتينية للكتابة. فكانوا يقومون باستخدام الحروف الإنجليزية للتعبير عن الكلمات والجمل العربية للتواصل. ولكن حتى بعد إضافة اللغة العربية إلى جميع الأجهزة والهواتف، استمر الشباب في استخدام هذه اللغة للتعود والسهولة، خاصة أن الحروف العربية قد تزيد من مساحة الرسائل وهذا ما يجعل الرسائل المدفوعة أكثر تكلفة في بعض الأنظمة القديمة.</p>
 
       <h3 class="text-2xl font-bold mt-8 mb-4 text-slate-800 dark:text-slate-100 border-r-4 border-indigo-500 pr-4">كيف أستخدم مترجم الفرانكو العربي هذا؟ (خطوات سريعة)</h3>
-      <!-- Improved H3 to be more action-oriented and include tool name -->
       <p class="mb-4 text-slate-600 dark:text-slate-300">يتم استخدام موقع <strong>مترجم الفرانكو</strong> هذا بكل سهولة. فالموقع يوفر <strong>الترجمة من اللغة العربية إلى الفرانكو</strong> ومن <strong>الفرانكو إلى اللغة العربية</strong>، عن طريق كتابة النص المراد ترجمته في الخانة المتاحة، ويتم الحصول على الترجمة بشكل مباشر في الخانة الأخرى. إنها وسيلة سهلة وسريعة جدًا <strong>لترجمة الفرانكو</strong>.</p>
 
       <h3 class="text-2xl font-bold mt-8 mb-4 text-slate-800 dark:text-slate-100 border-r-4 border-indigo-500 pr-4">مميزات وعيوب استخدام لغة الفرانكو</h3>
-      <!-- New H3 to consolidate pros and cons -->
       <h4 class="text-xl font-semibold mt-6 mb-2 text-slate-700 dark:text-slate-200 pr-4">مميزات استخدام الفرانكو:</h4>
       <ul class="list-disc list-inside bg-slate-50 dark:bg-slate-900/50 p-4 rounded-lg mb-4 space-y-2 text-slate-600 dark:text-slate-300">
         <li><strong>سهولة التواصل</strong> بين الشباب عبر مواقع التواصل الاجتماعي والدردشات السريعة.</li>
@@ -215,11 +183,9 @@
       <p class="mb-4 text-slate-600 dark:text-slate-300">يدعي الكثير من الأشخاص أن الفرانكو قد شوهت اللغة العربية لدى الشباب والجيل الجديد. نتيجة لإدمان هذه اللغة وكثرة استخدامها بين الشباب والأطفال، حدث اختلاط في التعبيرات بين اللغة العربية والفرانكو مما سبب ضعفًا لديهم في اللغة العربية الفصحى وقواعدها.</p>
 
       <h3 class="text-2xl font-bold mt-8 mb-4 text-slate-800 dark:text-slate-100 border-r-4 border-indigo-500 pr-4">تحويل الكلام من العربي لفرانكو بسهولة</h3>
-      <!-- Improved H3 for specific keyword targeting -->
       <p class="mb-4 text-slate-600 dark:text-slate-300">إذا كنت تريد <strong>الترجمة من العربي لفرانكو</strong>، يمكنك فهم في البداية كيفية تحويل بعض الحروف العربية التي يصعب تحويلها في اللغة الأجنبية. ولذلك استعان الناس ببعض الحروف من أجل تحويل تلك الحروف إلى أرقام (مثل تحويل حرف "الحاء" إلى "7"). وباقي الحروف التي تحولت لأرقام سبق ذكرها في الفقرات السابقة. ولكن إذا كنت تريد أن لا تبذل مجهودًا في التحويل وفهم كل هذه التفاصيل، يقدم لك موقعنا <strong>مترجمًا فوريًا من الفرانكو للعربي</strong> أو من <strong>العربي إلى الفرانكو</strong> بسهولة. كل ما عليك فعله هو نسخ النص في المكان المناسب وسيقوم الموقع بكل التفاصيل التي قد تصعب عليك، حتى إذا كنت تتحدث مع شخص بالفرانكو أو العكس، يمكنك استخدام الموقع بشكل لحظي.</p>
 
       <h3 class="text-2xl font-bold mt-8 mb-4 text-slate-800 dark:text-slate-100 border-r-4 border-indigo-500 pr-4">لماذا يعتبر هذا أفضل مترجم فرانكو عربي؟</h3>
-      <!-- Improved H3 for "best" keyword targeting -->
       <p class="mb-4 text-slate-600 dark:text-slate-300">إذا كنت تبحث حقًا عن <strong>أفضل موقع للترجمة من العربية إلى فرانكو</strong> أو العكس، فإن موقعنا يقوم بهذه المهمة ببراعة. ولذلك يجدنا معظم المستخدمين من أفضل المواقع التي تقدم هذه الخدمة للمستخدمين بشكل مجاني تمامًا. ويدل على ذلك المراجعات الإيجابية التي يرسلها لنا المستخدمون بشكل دائم، وأيضًا محافظتنا على تعديل وتحديث الخدمة بشكل مستمر. ويقوم الكثير من المستخدمين بالبحث عن موقعنا بالاسم من أجل الوصول لخدمتنا، وهو ما يدل على ولاء المستخدمين وحبهم لموقعنا بشكل خاص.</p>
 
       <p class="text-slate-600 dark:text-slate-300">في النهاية، لا يمكننا أن نشبه الفرانكو باللغة العربية أو نطلق عليها اسم "لغة" من الأساس، ولكنها مجرد أسلوب تعبير أو وسيلة للتواصل بين الأشخاص لعدة ظروف. فالفرانكو لا تشوه اللغة العربية ولا تطمس هويتها بأي شكل من الأشكال، ولكننا نحن من نقوم بذلك إذا أهملنا تعليم اللغة العربية للجيل الجديد، فاللغة العربية هي لغة القرآن وهي لغة العرب والمسلمين.</p>
@@ -230,7 +196,9 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // --- STATE ---
-    let sourceLanguage = 'franco';
+    // Initialize source language based on potential URL parameters or default to 'franco'
+    const urlParams = new URLSearchParams(window.location.search);
+    let sourceLanguage = urlParams.get('from') === 'arabic' ? 'arabic' : 'franco';
     let copied = null; // 'franco' | 'arabic' | null
     let translateTimeout;
 
@@ -248,28 +216,22 @@
     const translateBtn = document.getElementById('translate-btn');
     const swapBtn = document.getElementById('swap-btn');
     const clearBtn = document.getElementById('clear-btn');
+    const francoArea = document.querySelector('.franco-area'); // Get the parent div for Franco input
+    const arabicArea = document.querySelector('.arabic-area'); // Get the parent div for Arabic input
     
     // --- TRANSLATION LOGIC ---
-    // Expanded Franco map for more comprehensive translation
+    // Expanded Franco map for more comprehensive translation, order matters for multi-char
     const francoMap = {
+      'gh': 'غ', 'kh': 'خ', 'sh': 'ش', 'th': 'ث', 'dh': 'ذ', 'zh': 'ژ', // Multi-character combinations first
+      '2': 'ء', '3': 'ع', '4': 'ش', '5': 'خ', '6': 'ط', '7': 'ح', '8': 'ق', '9': 'ص', // Numbers
       'a': 'ا', 'b': 'ب', 'c': 'ك', 'd': 'د', 'e': 'ي', 'f': 'ف', 'g': 'ج', 'h': 'ه',
       'i': 'ي', 'j': 'ج', 'k': 'ك', 'l': 'ل', 'm': 'م', 'n': 'ن', 'o': 'و', 'p': 'ب',
-      'q': 'ق', 'r': 'ر', 's': 'س', 't': 'ت', 'u': 'و', 'v': 'ف', 'w': 'و', 'x': 'اكس',
+      'q': 'ق', 'r': 'ر', 's': 'س', 't': 'ت', 'u': 'و', 'v': 'ف', 'w': 'و', 'x': 'كس',
       'y': 'ي', 'z': 'ز',
-      '2': 'أ', // Hamza
-      '3': 'ع', // Ain
-      '4': 'ش', // Sheen (common for 'sh', sometimes also 'th')
-      '5': 'خ', // Khaa
-      '6': 'ط', // Taa
-      '7': 'ح', // Haa
-      '8': 'ق', // Qaf
-      '9': 'ص', // Saad
-      // Handling common combinations (must be done before single character mapping)
-      'sh': 'ش', 'kh': 'خ', 'th': 'ث', 'gh': 'غ', 'dh': 'ذ', 'zh': 'ژ', 'oa': 'ؤا', 'ee': 'ئي', // Example for common multi-char sounds
-      // Adding diacritics/tanween as needed, if any are commonly represented in Franco
-      // Numbers as standalone might need specific handling if they are not meant to be translated
+      // Add more specific mappings if needed (e.g., '7'' for 'خ' as per guide)
+      // '7`': 'خ', // Not easily mappable as a single char in regex without lookarounds
     };
-    
+
     // Expanded Arabic map for more comprehensive translation
     const arabicMap = {
       'ا': 'a', 'أ': '2', 'إ': 'e', 'آ': 'a', 'ب': 'b', 'ت': 't', 'ث': 'th',
@@ -277,28 +239,32 @@
       'س': 's', 'ش': 'sh', 'ص': '9', 'ض': 'd', 'ط': '6', 'ظ': 'z', 'ع': '3',
       'غ': 'gh', 'ف': 'f', 'ق': '8', 'ك': 'k', 'ل': 'l', 'م': 'm', 'ن': 'n',
       'ه': 'h', 'ة': 'a', 'و': 'w', 'ي': 'y', 'ى': 'a', 'ء': '2',
-      // Adding common Arabic diacritics or less common letters if relevant
-      'ف': 'f', // Added previously missing 'ف'
-      'ژ': 'zh', // Example for less common characters if needed
+      'ئ': 'e', 'ؤ': 'o', // More complete handling of Hamza forms
+      'ة': 'a', // Taa marbuta often converted to 'a'
+      'ى': 'a', // Alef maksura often converted to 'a'
     };
 
     const translateFrancoToArabic = (text) => {
       let result = text.toLowerCase();
-      // Handle multi-character Franco combinations first to avoid partial replacements
-      result = result.replace(/gh/g, 'غ');
-      result = result.replace(/kh/g, 'خ');
-      result = result.replace(/sh/g, 'ش');
-      result = result.replace(/th/g, 'ث');
-      result = result.replace(/dh/g, 'ذ'); // Example
-      result = result.replace(/zh/g, 'ژ'); // Example
+      // Sort keys by length descending to ensure multi-character mappings are processed first
+      const sortedFrancoKeys = Object.keys(francoMap).sort((a, b) => b.length - a.length);
 
-      // Then map single characters
-      return result.split('').map(char => francoMap[char] || char).join('');
+      for (const key of sortedFrancoKeys) {
+        // Use a global regex to replace all occurrences
+        result = result.replace(new RegExp(key, 'g'), francoMap[key]);
+      }
+      return result;
     };
 
     const translateArabicToFranco = (text) => {
-      // Map Arabic to Franco. Consider a more advanced regex for combinations if needed
-      return text.split('').map(char => arabicMap[char] || char).join('');
+      let result = text;
+      // Sort keys by length descending for Arabic to Franco too, in case of multi-char Arabic representations
+      const sortedArabicKeys = Object.keys(arabicMap).sort((a, b) => b.length - a.length);
+      
+      for (const key of sortedArabicKeys) {
+        result = result.replace(new RegExp(key, 'g'), arabicMap[key]);
+      }
+      return result;
     };
 
     // --- UI UPDATE FUNCTION ---
@@ -307,13 +273,17 @@
       francoLabel.textContent = sourceLanguage === 'franco' ? 'فرانكو (من)' : 'فرانكو (إلى)';
       arabicLabel.textContent = sourceLanguage === 'arabic' ? 'عربي (من)' : 'عربي (إلى)';
 
-      // Update focus rings
+      // Update focus rings and border for active input area
       if (sourceLanguage === 'franco') {
         francoInput.classList.add('ring-2', 'ring-indigo-500');
+        francoArea.classList.add('border', 'border-indigo-500'); // Add border to parent div
         arabicInput.classList.remove('ring-2', 'ring-indigo-500');
+        arabicArea.classList.remove('border', 'border-indigo-500');
       } else {
         arabicInput.classList.add('ring-2', 'ring-indigo-500');
+        arabicArea.classList.add('border', 'border-indigo-500'); // Add border to parent div
         francoInput.classList.remove('ring-2', 'ring-indigo-500');
+        francoArea.classList.remove('border', 'border-indigo-500');
       }
 
       // Update copy icons
@@ -323,17 +293,19 @@
       arabicCheckIcon.classList.toggle('hidden', copied !== 'arabic');
 
       // Update button disabled states
-      francoCopyBtn.disabled = !francoInput.value;
-      arabicCopyBtn.disabled = !arabicInput.value;
+      francoCopyBtn.disabled = !francoInput.value.trim();
+      arabicCopyBtn.disabled = !arabicInput.value.trim();
       translateBtn.disabled = (sourceLanguage === 'franco' ? !francoInput.value.trim() : !arabicInput.value.trim());
     };
 
     // --- EVENT HANDLERS ---
     const translate = () => {
-      clearTimeout(translateTimeout);
-      const textToTranslate = sourceLanguage === 'franco' ? francoInput.value : arabicInput.value;
+      clearTimeout(translateTimeout); // Clear any pending debounced translation
 
-      if (!textToTranslate.trim()) {
+      const textToTranslate = sourceLanguage === 'franco' ? francoInput.value.trim() : arabicInput.value.trim();
+
+      if (!textToTranslate) {
+        // If source input is empty, clear the target input
         if (sourceLanguage === 'franco') {
           arabicInput.value = '';
         } else {
@@ -344,7 +316,7 @@
       }
       
       const result = sourceLanguage === 'franco' 
-        ? translateFrancoToArabic(textToTranslate.toLowerCase()) 
+        ? translateFrancoToArabic(textToTranslate) 
         : translateArabicToFranco(textToTranslate);
 
       if (sourceLanguage === 'franco') {
@@ -352,49 +324,53 @@
       } else {
         francoInput.value = result;
       }
-      updateUI();
+      updateUI(); // Update UI to reflect translation and button states
     };
 
     const debouncedTranslate = () => {
       clearTimeout(translateTimeout);
-      translateTimeout = setTimeout(translate, 250);
+      translateTimeout = setTimeout(translate, 300); // Increased debounce time slightly for less aggressive re-translation
     };
     
     francoInput.addEventListener('input', () => {
         sourceLanguage = 'franco';
         debouncedTranslate();
-        updateUI();
+        updateUI(); // Update UI immediately to show active input
     });
 
     arabicInput.addEventListener('input', () => {
         sourceLanguage = 'arabic';
         debouncedTranslate();
-        updateUI();
+        updateUI(); // Update UI immediately to show active input
     });
     
     translateBtn.addEventListener('click', translate);
 
     swapBtn.addEventListener('click', () => {
       const francoVal = francoInput.value;
-      francoInput.value = arabicInput.value;
+      const arabicVal = arabicInput.value;
+
+      francoInput.value = arabicVal;
       arabicInput.value = francoVal;
+      
       sourceLanguage = sourceLanguage === 'franco' ? 'arabic' : 'franco';
+      
+      // After swap, the content in the "from" box has changed, so re-translate
+      translate(); 
       updateUI();
-      // Retrigger translation after swap, using the new source content
-      debouncedTranslate();
     });
 
     clearBtn.addEventListener('click', () => {
       francoInput.value = '';
       arabicInput.value = '';
-      sourceLanguage = 'franco';
+      sourceLanguage = 'franco'; // Reset to default source language
       copied = null;
       updateUI();
     });
     
     const copyToClipboard = (type) => {
       const textToCopy = type === 'franco' ? francoInput.value : arabicInput.value;
-      if (!textToCopy) return;
+      if (!textToCopy.trim()) return;
       
       navigator.clipboard.writeText(textToCopy).then(() => {
           copied = type;
@@ -402,7 +378,7 @@
           setTimeout(() => {
             copied = null;
             updateUI();
-          }, 2000);
+          }, 2000); // Show checkmark for 2 seconds
       }).catch(err => {
           console.error('Failed to copy text: ', err);
       });
@@ -412,7 +388,15 @@
     arabicCopyBtn.addEventListener('click', () => copyToClipboard('arabic'));
 
     // --- INITIALIZATION ---
-    updateUI();
+    // If there's text in the francoInput from a URL parameter on load, trigger initial translation
+    if (francoInput.value.trim()) {
+      sourceLanguage = 'franco';
+      translate();
+    } else if (arabicInput.value.trim()) {
+      sourceLanguage = 'arabic';
+      translate();
+    }
+    updateUI(); // Initial UI update to set labels and button states correctly
   });
 </script>
 
